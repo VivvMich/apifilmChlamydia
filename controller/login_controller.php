@@ -15,20 +15,20 @@
             if(password_verify($_POST['user_psw'], $user['user_psw'])){
                 session_start();
 
-                $_SESSION['name'] = $user['firstname_user'];
+                $_SESSION['name'] = $user['user_name'];
                 $_SESSION['user_id'] = $user['id_user'];
 
                 header("Location: ../view/homepage.php"); 
             }else{
-                header("Location: login.php?message=Identifiants incorrectes.&status=error"); 
+                header("Location: ../view/login.php?message=Identifiants incorrectes.&status=error"); 
             }
 
         }else{
-            header("Location: login.php?message=Identifiants incorrectes.&status=error"); 
+            header("Location: ../view/login.php?message=Identifiants incorrectes.&status=error"); 
         }
 
     }else{
-        header("Location: login.php?message=Entrez vos identifiants correctement.&status=error");
+        header("Location: ../view/login.php?message=Entrez vos identifiants correctement.&status=error");
     }
 
 ?>
