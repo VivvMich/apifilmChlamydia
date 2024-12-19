@@ -16,7 +16,7 @@
                 session_start();
 
                 $_SESSION['name'] = $user['user_name'];
-                $_SESSION['user_id'] = $user['id_user'];
+                $_SESSION['id_user'] = $user['user_id'];
 
                 header("Location: ../view/homepage.php"); 
             }else{
