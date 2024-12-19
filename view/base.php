@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navbar bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
+<nav class="navbar bg-dark border-bottom border-body navbar-expand-lg " data-bs-theme="dark">
   <div class="container-fluid">
 
     <a class="navbar-brand" href="#">Scroll Movies</a>
@@ -22,33 +22,23 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <a class="nav-link" href="#">FILMS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
+          <a class="nav-link text-success" href="#">Connexion</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="#">S'inscrire</a>
+        </li>
+
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Recherchez un film" aria-label="Search">
       </form>
     </div>
   </div>
 </nav>
 
-</body>
-</html>
