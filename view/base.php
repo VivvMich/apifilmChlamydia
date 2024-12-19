@@ -20,25 +20,29 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">FILMS</a>
+          <a class="nav-link text-primary" href="#">FILMS</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-success" href="#">Connexion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-success" href="#">S'inscrire</a>
-        </li>
-
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Recherchez un film" aria-label="Search">
-      </form>
+        <form class="me-auto w-50" role="search">
+          <input class="form-control me-2" type="search" placeholder="Recherchez un film" aria-label="Search">   
+        </form>
+
+        <ul class="navbar-nav me-end my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">Connexion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">S'inscrire</a>
+        </li>
+        </ul>
     </div>
   </div>
 </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
