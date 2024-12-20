@@ -14,12 +14,33 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  height: 200vh;
 }
 
 .dm-serif-display-regular {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.liste-nav li:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.recherche {
+  font-size: 1.2em !important;
+}
+.recherche:focus {
+  color: var(--secondary) !important;
+  box-shadow: 0 0 5px #ff5733 !important; /* Effet lumineux autour */
+  border-color: var(--secondary) !important;
+  transition: all 0.3s ease;
+}
+
+::placeholder {
+  color: var(--secondary) !important;
+  opacity: 0.7 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
