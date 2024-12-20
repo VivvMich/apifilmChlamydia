@@ -1,4 +1,4 @@
-<?php
+o<?php
 include "base.php"
 ?>
 
@@ -16,7 +16,7 @@ include "base.php"
             <input class="form-control" type="password" name="user_psw">
 
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-prim py-1 px-4">S'inscrire</button>
+                <button type="submit" class="btn btn-prim py-1 px-4">Se connecter</button>
             </div>
             
         </form>
