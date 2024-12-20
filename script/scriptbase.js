@@ -6,7 +6,7 @@ search.addEventListener("input", function(){
     console.log(v);
 
   
-  fetch(`https://api.themoviedb.org/3/search/movie?query=${v}&include_adult=false&language=fr-FR&page=1&api_key=2503d00d549b6a52558ef4eeffabb642`)
+  fetch(`https://api.themoviedb.org/3/search/movie?query=${v}&include_adult=false&language=fr-FR&page=1&api_key=`)
     .then(response => response.json())
     .then(movies =>{
         let res = movies.results
