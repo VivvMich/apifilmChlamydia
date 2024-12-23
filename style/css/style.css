@@ -34,4 +34,25 @@ body {
   transition: 0.5s;
 }
 
+.recherche {
+  font-size: 1.2em !important;
+}
+.recherche:focus {
+  color: var(--secondary) !important;
+  box-shadow: 0 0 5px #ff5733 !important;
+  border-color: var(--secondary) !important;
+  transition: all 0.3s ease;
+}
+
+.search-list:hover {
+  background-color: #9f496e;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: var(--secondary) !important;
+  opacity: 0.7 !important;
+}
+
 /*# sourceMappingURL=style.css.map */

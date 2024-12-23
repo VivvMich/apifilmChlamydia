@@ -3,7 +3,7 @@ include "base.php";
 include "../controller/films_by_genre_controller.php";
 ?>
 
-<h1 class="text-center my-4"><?= htmlspecialchars($genre_name); ?></h1>
+<h1 class="text-center my-4"><?= $genre_name; ?></h1>
 
 <?php
 
@@ -15,12 +15,12 @@ if (!empty($films)) {
         <div class="col-12 col-md-4 col-lg-3 mb-4">
             <div class="card">
                 <?php if (isset($film['poster_path'])): ?>
-                    <img src="https://image.tmdb.org/t/p/w500<?= $film['poster_path']; ?>" class="card-img-top" alt="<?= htmlspecialchars($film['title']); ?>">
+                    <img src="https://image.tmdb.org/t/p/w500<?= $film['poster_path']; ?>" class="card-img-top" alt="<?= $film['title']; ?>">
                 <?php endif; ?>
                 
                 <div class="card-body">
-                    <h5 class="card-title"><?= htmlspecialchars($film['title']); ?></h5>
-                    <p class="card-text"><?= htmlspecialchars(substr($film['overview'], 0, 200)); ?>...</p>
+                    <h5 class="card-title"><?= $film['title']; ?></h5>
+                    <p class="card-text"><?= substr($film['overview'], 0, 200); ?>...</p>
                     <p class="card-text"><strong>Note:</strong> <?= $film['vote_average']; ?>/10</p>
                 </div>
                 
