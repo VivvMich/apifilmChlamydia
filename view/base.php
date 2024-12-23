@@ -28,8 +28,12 @@ include "../controller/pdo.php";
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll liste-nav" style="--bs-scroll-height: 200px;">
-        <li class="nav-item">
-          <a class="nav-link text-primary" href="view/films.php">FILMS</a>
+        <li class="nav-item dropdown" id="filmsDropdown">
+          <a class="nav-link text-primary dropdown-toggle" id="filmsLink" role="button" aria-expanded="false">
+            CATÉGORIES
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="filmsLink" id="genreDropdownMenu">
+          </ul>
         </li>
       </ul>
         <div class="me-auto w-50">
