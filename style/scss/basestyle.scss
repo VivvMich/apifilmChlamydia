@@ -14,7 +14,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  height: 200vh;
 }
 
 .dm-serif-display-regular {
@@ -25,15 +24,20 @@ body {
 
 .liste-nav{
   li{
+    transition: all 0.3s ease;
     &:hover{
       transform: scale(1.1);
       transition: all 0.3s ease;
+      border: solid var(--secondary);
+      border-width: 1px;
+      border-radius: 5px;
     }
   }  
 }
 
 .recherche{
   font-size: 1.2em !important;
+  transition: all 0.3s ease;
 
 
     &:focus{
@@ -43,6 +47,17 @@ body {
       transition: all 0.3s ease;
     }
 
+  }
+
+  .search-list{
+
+    &:hover{
+      background-color: #9f496e;
+      opacity:0.9;
+      cursor: pointer;
+  
+    }
+  
   }
 
   ::placeholder{

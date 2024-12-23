@@ -11,7 +11,7 @@ include "../controller/pdo.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/css/style.css">
+    <link rel="stylesheet" href="../style/css/basestyle.css">
     <script defer src="../script/scriptbase.js"></script>
     <base href="http://localhost/apifilmChlamydia/">
 
@@ -33,10 +33,17 @@ include "../controller/pdo.php";
         </li>
       </ul>
         <div class="me-auto w-50">
-            <input class="form-control me-2 my-1 text-center recherche" type="search" placeholder="Recherchez un film..." aria-label="Search" id="search">   
-            <ul class="list-group mt-2" id="results">
-
-            </ul>     
+        <form class="position-relative">
+                    <input class="form-control me-2 text-center recherche"
+                        id="search"
+                        type="search"
+                        placeholder="Rechercher un film ..."
+                        aria-label="Search">
+                    <ul class="list-group d-flex flex-column position-absolute text-center w-100 opacity-75 mt-4"
+                        id="results">
+                    </ul>
+                    <!-- <button class="btn btn-outline-success" type="submit">Rechercher</button> -->
+                </form>
         </div>
 
         <ul class="navbar-nav me-end my-2 my-lg-0 navbar-nav-scroll liste-nav" style="--bs-scroll-height: 200px;">

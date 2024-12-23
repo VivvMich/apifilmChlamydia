@@ -22,13 +22,20 @@ body {
   font-style: normal;
 }
 
+.liste-nav li {
+  transition: all 0.3s ease;
+}
 .liste-nav li:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
+  border: solid var(--secondary);
+  border-width: 1px;
+  border-radius: 5px;
 }
 
 .recherche {
   font-size: 1.2em !important;
+  transition: all 0.3s ease;
 }
 .recherche:focus {
   color: var(--secondary) !important;
@@ -37,9 +44,15 @@ body {
   transition: all 0.3s ease;
 }
 
+.search-list:hover {
+  background-color: #9f496e;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 ::placeholder {
   color: var(--secondary) !important;
   opacity: 0.7 !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=basestyle.css.map */
