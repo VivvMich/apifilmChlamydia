@@ -15,7 +15,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=api_film;charset=utf8', 'root', '123
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/css/style.css">
   <script defer src="../script/scriptbase.js"></script>
-
+  <base href="http://localhost/apifilmChlamydia/">
   <title>Scroll Movies</title>
 </head>
 
@@ -33,19 +33,18 @@ $pdo = new PDO('mysql:host=localhost;dbname=api_film;charset=utf8', 'root', '123
           <li class="nav-item">
             <a class="nav-link text-primary" href="view/films.php">FILMS</a>
           </li>
-          <li class="nav-item dropdown" id="filmsDropdown">
-            <a class="nav-link text-primary dropdown-toggle" id="filmsLink" role="button" aria-expanded="false">
-              CATÉGORIES
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="filmsLink" id="genreDropdownMenu">
-            </ul>
-          </li>
         </ul>
         <div class="me-auto w-50">
-          <input class="form-control me-2 my-1 text-center recherche" type="search" placeholder="Recherchez un film..." aria-label="Search" id="search">
-          <ul class="list-group mt-2" id="results">
-
-          </ul>
+          <form class="position-relative">
+            <input class="form-control me-2 text-center recherche"
+              id="search"
+              type="search"
+              placeholder="Rechercher un film ..."
+              aria-label="Search">
+            <ul class="list-group d-flex flex-column position-absolute text-center w-100 opacity-75 mt-4"
+              id="results">
+            </ul>
+          </form>
         </div>
 
         <ul class="navbar-nav me-end my-2 my-lg-0 navbar-nav-scroll liste-nav" style="--bs-scroll-height: 200px;">
