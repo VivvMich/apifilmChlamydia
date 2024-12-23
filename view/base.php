@@ -15,7 +15,6 @@ include "../controller/pdo.php";
   <link rel="stylesheet" href="../style/css/style.css">
   <script defer src="../script/scriptbase.js"></script>
   <base href="http://localhost/apifilmChlamydia/">
-
   <title>Scroll Movies</title>
 </head>
 
@@ -48,7 +47,6 @@ include "../controller/pdo.php";
             <ul class="list-group d-flex flex-column position-absolute text-center w-100 opacity-75 mt-4"
               id="results">
             </ul>
-            <!-- <button class="btn btn-outline-success" type="submit">Rechercher</button> -->
           </form>
         </div>
 

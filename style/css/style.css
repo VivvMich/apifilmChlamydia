@@ -14,6 +14,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: var(--dark);
 }
 
 .dm-serif-display-regular {
@@ -55,4 +56,30 @@ body {
   opacity: 0.7 !important;
 }
 
-/*# sourceMappingURL=basestyle.css.map */
+h1 {
+  color: var(--primary);
+}
+
+.container {
+  box-shadow: var(--box-shadow);
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.genres:hover > :not(:hover) {
+  opacity: 0.5;
+}
+.genres a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  background: linear-gradient(90deg, #9f496e 0%, #647295 50%, #9f496e 100%);
+  width: 100%;
+  text-align: center;
+  border: solid 1px rgba(0, 0, 0, 0.404);
+}
+
+/*# sourceMappingURL=style.css.map */
