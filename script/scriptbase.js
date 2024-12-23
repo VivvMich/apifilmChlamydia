@@ -17,12 +17,12 @@ search.addEventListener("input", function () {
       for (el of res) {
         const li = document.createElement("li");
         li.classList.add("list-group-item", "search-list");
-        // Ajouter le texte du titre
         li.innerHTML = el.title;
-        // Ajouter un événement clic pour rediriger
         li.addEventListener("click", () => {
           window.location.href = `movie_view.php&id=${el.id}`;
         });
+        console.log(li);
+
         results.appendChild(li);
       }
     })

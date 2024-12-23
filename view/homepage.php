@@ -31,9 +31,8 @@ include "base.php";
             .then(res => res.json())
             .then(res => {
                 console.log(res);
-                for (let i = 0; i <= 5; i++) {
+                for (let i = 0; i <= res.results.length; i++) {
                     const element = res.results[i];
-                    console.log(element.original_title);
                 }
             })
             .catch(err => console.error(err));
