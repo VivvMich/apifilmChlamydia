@@ -29,23 +29,24 @@ h1 {
 
 .container {
   box-shadow: var(--box-shadow);
-  min-height: 50vh;
 }
 
 .title {
   font-size: 3rem;
 }
 
-button {
-  border: solid 2px var(--dark);
-  border-radius: 10px;
-  background-color: var(--primary);
-  color: white;
-  &:hover {
-    border-color: var(--primary);
-    background-color: var(--secondary);
-    transition: 0.5s;
-  }
+.genres:hover > :not(:hover) {
+  opacity: 0.5;
+}
+.genres a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  background: linear-gradient(90deg, #9f496e 0%, #647295 50%, #9f496e 100%);
+  width: 100%;
+  text-align: center;
+  border: solid 1px rgba(0, 0, 0, 0.404);
 }
 
 /*# sourceMappingURL=style.css.map */
