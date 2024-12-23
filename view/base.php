@@ -1,6 +1,5 @@
 <?php session_start();
-//include "../controller/pdo.php";
-$pdo = new PDO('mysql:host=localhost;dbname=api_film;charset=utf8', 'root', '1234');
+include "../controller/pdo.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
