@@ -8,7 +8,6 @@ if (isset($_GET['genre_id'])) {
     $page = max($page, 1);
 
     $url = "https://api.themoviedb.org/3/discover/movie?with_genres=" . $genre_id . "&api_key=" . $api_key . "&page=" . $page . "&language=fr";
-
     $response = file_get_contents($url);
     $data = json_decode($response, true);
 
@@ -31,7 +30,6 @@ if (isset($_GET['genre_id'])) {
         $films = [];
         $genre_name = 'Genre non spécifié';
         $total_pages = 1;
-        include "../view/films_by_genre.php";
+        header("Location : ../view/films_by_genre.php");
     }
 }
-?>
