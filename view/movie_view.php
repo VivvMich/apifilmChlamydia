@@ -15,7 +15,6 @@ include "../controller/movie_controller.php";
                     <img src="https://placehold.co/600x600" alt="Jacket du film" class="img-fluid">
                 <?php endif; ?>
             </div>
-
             <div class="col-12 col-md-6">
                 <div class="mx-3 mt-2">
                     <h3>Langue originale du film</h3>
@@ -40,26 +39,6 @@ include "../controller/movie_controller.php";
                         <h3>Note moyenne</h3>
                         <p><?= $film_data['vote_average']; ?>/10</p>
                     </div>
-                    <div class="my-5">
-                        <h3>Acteurs principaux</h3>
-                        <ul class="list-group list-group-horizontal flex-wrap">
-                            <?php if (!empty($film_data['actors'])): ?>
-                                <?php foreach ($film_data['actors'] as $actor): ?>
-                                    <li class="list-group-item">
-                                        <?php if ($actor['profile_path']): ?>
-                                            <img src="https://image.tmdb.org/t/p/w92<?= $actor['profile_path']; ?>" alt="<?= $actor['name']; ?>" class="img-fluid" style="width: 50px; height: 75px;">
-                                        <?php else: ?>
-                                            <span>Aucune image disponible</span>
-                                        <?php endif; ?>
-                                        <?= $actor['name']; ?> (<?= $actor['character']; ?>)
-                                    </li>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <p>Aucun acteur trouvé.</p>
-                            <?php endif; ?>
-                        </ul>
-                    </div>
-                    
                 </div>
             </div>
         </div>

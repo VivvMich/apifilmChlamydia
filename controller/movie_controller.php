@@ -5,7 +5,14 @@ if (isset($_GET['film_id'])) {
     $api_key = '99f201be404368c1e7bbe43792331934';
 
     $url = "https://api.themoviedb.org/3/movie/" . $film_id . "?api_key=" . $api_key . "&language=fr";
-    $response = file_get_contents($url);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    $response = curl_exec($ch);
+
+    curl_close($ch);
     $film_details = json_decode($response, true);
 
     if ($film_details) {
@@ -17,14 +24,16 @@ if (isset($_GET['film_id'])) {
         $overview = $film_details['overview'];
 
         $credits_url = "https://api.themoviedb.org/3/movie/" . $film_id . "/credits?api_key=" . $api_key;
-        $credits_response = file_get_contents($credits_url);
-        $credits_data = json_decode($credits_response, true);
 
-        if ($credits_data && isset($credits_data['cast'])) {
-            $actors = array_slice($credits_data['cast'], 0, 5);
-        } else {
-            $actors = [];
-        }
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $credits_url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+
+        $credits_response = curl_exec($ch);
+        curl_close($ch);
+
+        $credits_data = json_decode($credits_response, true);
 
         $film_data = [
             'original_language' => $original_language,
@@ -33,7 +42,6 @@ if (isset($_GET['film_id'])) {
             'vote_average' => $vote_average,
             'genres' => $genres,
             'overview' => $overview,
-            'actors' => $actors
         ];
     } else {
         echo "Film non trouvé.";
