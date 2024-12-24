@@ -7,7 +7,7 @@ include "base.php";
         <input type="text"
             class="form-control query recherche"
             placeholder="Titre du film ?" aria-label="search" aria-describedby="button-addon2">
-        <button class="px-4" type="button" id="button-addon2">Rechercher</button>
+        <button class="px-4 btn btn-primary" type="button" id="button-addon2">Rechercher</button>
     </div>
     <h4 class="py-3">Parcourir les films par genres :</h4>
     <div class="genres d-flex flex-column align-items-center border">
@@ -15,7 +15,7 @@ include "base.php";
 
 </div>
 <script>
-    const search = document.querySelector(".query")
+    const rechercher = document.querySelector(".query")
     const btnSearch = document.querySelector("#button-addon2")
     const genreList = document.querySelector(".genres")
     const options = {
@@ -27,12 +27,18 @@ include "base.php";
     };
 
     btnSearch.addEventListener("click", function() {
-        fetch(`https://api.themoviedb.org/3/search/movie?query=${search.value}&include_adult=false&language=fr&page=1&api_key=625994fab9d9cba4f567276b027cc086`, options)
+        genreList.innerHTML = "";
+        fetch(`https://api.themoviedb.org/3/search/movie?query=${rechercher.value}&include_adult=false&language=fr&page=1&api_key=625994fab9d9cba4f567276b027cc086`, options)
             .then(res => res.json())
             .then(res => {
                 console.log(res);
                 for (let i = 0; i <= res.results.length; i++) {
                     const element = res.results[i];
+                    console.log(element.original_title);
+                    let contenu = document.createElement("a")
+                    contenu.innerHTML = element.original_title
+                    contenu.href = `./view/movie_view.php?film_id=${element.id}`
+                    genreList.appendChild(contenu)
                 }
             })
             .catch(err => console.error(err));

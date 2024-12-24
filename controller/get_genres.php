@@ -8,9 +8,7 @@ $response = file_get_contents($url);
 if ($response) {
     $data = json_decode($response, true);
     $genres = $data['genres'];
-
     echo json_encode($genres);
 } else {
     echo json_encode(['error' => 'Impossible de récupérer les genres de films.']);
 }
-?>

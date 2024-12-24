@@ -22,7 +22,6 @@ search.addEventListener("input", function () {
           window.location.href = `movie_view.php&id=${el.id}`;
         });
         console.log(li);
-
         results.appendChild(li);
       }
     })
@@ -36,7 +35,7 @@ filmsLink.addEventListener("click", function (event) {
     isDropdownVisible = false;
   } else {
     if (!isGenresLoaded) {
-      fetch("../controller/get_genres.php")
+      fetch("controller/get_genres.php")
         .then((response) => response.json())
         .then((data) => {
           genreDropdownMenu.innerHTML = "";
