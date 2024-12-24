@@ -30,8 +30,7 @@ include "base.php";
         fetch(`https://api.themoviedb.org/3/search/movie?query=${search.value}&include_adult=false&language=fr&page=1&api_key=625994fab9d9cba4f567276b027cc086`, options)
             .then(res => res.json())
             .then(res => {
-                console.log(res);
-                for (let i = 0; i <= 5; i++) {
+                for (let i = 0; i <= res.results.length; i++) {
                     const element = res.results[i];
                     console.log(element.original_title);
                 }
