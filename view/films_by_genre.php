@@ -25,7 +25,7 @@ if (!empty($films)) {
                 </div>
 
                 <div class="card-footer text-muted">
-                    <a href="movie_view.php?film_id=<?= $film['id']; ?>" class="btn button-cool">Voir plus</a>
+                    <a href="./view/movie_view.php?film_id=<?= $film['id']; ?>" class="btn button-cool">Voir plus</a>
                 </div>
             </div>
         </div>
@@ -38,18 +38,18 @@ if (!empty($films)) {
     ?>
         <div class="d-flex justify-content-center my-4">
             <?php if ($page > 1): ?>
-                <a href="films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $page - 1; ?>" class="btn button-cool mx-2">Précédent</a>
+                <a href="./view/films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $page - 1; ?>" class="btn button-cool mx-2">Précédent</a>
             <?php endif; ?>
 
             <?php
             for ($i = max(1, $page - 2); $i <= min($total_pages, $page + 2); $i++):
                 $active_class = ($i == $page) ? 'active' : '';
             ?>
-                <a href="films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $i; ?>" class="btn button-cool mx-2 <?= $active_class; ?>"><?= $i; ?></a>
+                <a href="./view/films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $i; ?>" class="btn button-cool mx-2 <?= $active_class; ?>"><?= $i; ?></a>
             <?php endfor; ?>
 
             <?php if ($page < $total_pages): ?>
-                <a href="films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $page + 1; ?>" class="btn button-cool mx-2">Suivant</a>
+                <a href="./view/films_by_genre.php?genre_id=<?= $genre_id; ?>&page=<?= $page + 1; ?>" class="btn button-cool mx-2">Suivant</a>
             <?php endif; ?>
         </div>
 <?php

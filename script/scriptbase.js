@@ -66,7 +66,7 @@ search.addEventListener("input", function () {
         li.classList.add("list-group-item", "search-list");
         li.innerHTML = el.title;
         li.addEventListener("click", () => {
-          window.location.href = `movie_view.php&id=${el.id}`;
+          window.location.href = `./view/movie_view.php?film_id=${el.id}`;
         });
         console.log(li);
         results.appendChild(li);
@@ -90,7 +90,7 @@ filmsLink.addEventListener("click", function (event) {
             const li = document.createElement("li");
             const a = document.createElement("a");
             a.classList.add("dropdown-item");
-            a.href = `../view/films_by_genre.php?genre_id=${genre.id}`;
+            a.href = `./view/films_by_genre.php?genre_id=${genre.id}`;
             a.textContent = genre.name;
             li.appendChild(a);
             genreDropdownMenu.appendChild(li);
