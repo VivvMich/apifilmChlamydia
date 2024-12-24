@@ -59,6 +59,37 @@ body {
 ::placeholder {
   color: var(--secondary) !important;
   opacity: 0.7 !important;
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+.success {
+  margin-top: 2rem;
+  color: #30a021;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  font-variant: small-caps;
+}
+
+.error {
+  margin-top: 2rem;
+  color: #b31818;
+  text-shadow: 1px 1px #00000080;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  font-variant: small-caps;
 }
 
 h1 {
@@ -96,4 +127,16 @@ h1 {
 .nav-item,
 .dropdown-item {
   border: none !important;
+}
+
+button[type="submit"] {
+  border: solid 2px var(--dark);
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: white;
+  &:hover {
+    border-color: var(--primary);
+    background-color: var(--secondary);
+    transition: 0.5s;
+  }
 }

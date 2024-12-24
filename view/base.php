@@ -44,7 +44,7 @@ include "../controller/pdo.php";
               type="search"
               placeholder="Rechercher un film ..."
               aria-label="Search">
-            <ul class="list-group d-flex flex-column position-absolute text-center w-100 opacity-75 mt-4"
+            <ul class="list-group d-flex flex-column position-absolute text-center w-100 opacity-75 mt-2"
               id="results">
             </ul>
           </form>
