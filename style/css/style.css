@@ -15,6 +15,10 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .dm-serif-display-regular {
@@ -133,6 +137,64 @@ button[type=submit]:hover {
   border-color: var(--primary);
   background-color: var(--secondary);
   transition: 0.5s;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 4rem 0;
+  margin-top: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .container {
+  text-align: center;
+}
+
+footer .footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+}
+
+footer .logo svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+footer .logo svg:hover {
+  transform: rotate(360deg);
+}
+
+footer .d-flex a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-link:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+footer p.small {
+  font-size: 0.8rem;
+  color: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */

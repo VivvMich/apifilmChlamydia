@@ -58,5 +58,5 @@ if (!empty($films)) {
     echo "<p class='text-center'>Aucun film trouvé pour ce genre.</p>";
 }
 
-//include "footer.php";
+include "footer.php";
 ?>
