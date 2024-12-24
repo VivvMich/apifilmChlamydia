@@ -18,8 +18,8 @@ include "../controller/movie_controller.php";
 
             <div class="col-12 col-md-6">
                 <div class="mx-3">
-                    <div class="my-5">
-                        <h2>Genres</h2>
+                    <div class="my-2">
+                        <h3>Genres</h3>
                         <ul class="list-group list-group-horizontal flex-wrap">
                             <?php
                             foreach ($film_data['genres'] as $genre) {
@@ -29,7 +29,15 @@ include "../controller/movie_controller.php";
                         </ul>
                     </div>
                     <div class="my-5">
-                        <h2>Acteurs principaux</h2>
+                        <h3>Synopsis</h3>
+                        <p><?= $film_data['overview']; ?></p>
+                    </div>
+                    <div class="my-1">
+                        <h3>Note moyenne</h3>
+                        <p><?= $film_data['vote_average']; ?>/10</p>
+                    </div>
+                    <div class="my-5">
+                        <h3>Acteurs principaux</h3>
                         <ul class="list-group list-group-horizontal flex-wrap">
                             <?php if (!empty($film_data['actors'])): ?>
                                 <?php foreach ($film_data['actors'] as $actor): ?>
@@ -47,10 +55,7 @@ include "../controller/movie_controller.php";
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="my-5">
-                        <h2>Synopsis</h2>
-                        <p><?= $film_data['overview']; ?></p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
