@@ -17,6 +17,10 @@ include "../controller/movie_controller.php";
             </div>
 
             <div class="col-12 col-md-6">
+                <div class="mx-3 mt-2">
+                    <h3>Langue originale du film</h3>
+                    <p><?= strtoupper($film_data['original_language']); ?></p> 
+                </div>
                 <div class="mx-3">
                     <div class="my-2">
                         <h3>Genres</h3>
