@@ -2,9 +2,7 @@
 include "pdo.php";
 
 if ($_POST['psw1'] === $_POST['psw2']) {
-
     $psw = password_hash($_POST["psw1"], PASSWORD_ARGON2I);
-
     $sql = "INSERT INTO users (
                         user_name, 
                         user_mail, 
