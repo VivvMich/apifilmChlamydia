@@ -61,16 +61,16 @@ search.addEventListener("input", function () {
     .then((movies) => {
       let res = movies.results;
       results.innerHTML = "";
-      for (el of res) {
-        const li = document.createElement("li");
+      res.forEach((el) => {
+        let li = document.createElement("li");
         li.classList.add("list-group-item", "search-list");
         li.innerHTML = el.title;
-        li.addEventListener("click", () => {
+        li.addEventListener("click", function () {
+          console.log(el.id);
           window.location.href = `./view/movie_view.php?film_id=${el.id}`;
         });
-        console.log(li);
         results.appendChild(li);
-      }
+      });
     })
     .catch((err) => console.error(err));
 });
